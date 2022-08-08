@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+
+
+.mat-select-green .mat-select-value {
+  color: green !important;
+}
+
+.mat-option .mat-focus-indicator .ng-tns-c104-1 .ng-star-inserted .mat-selected .mat-active{
+  color: green !important;
+}
+
+.mat-select-arrow-wrapper .ng-tns-c104-1, .mat-option-text{
+  color: rgb(142, 157, 142) !important;
+}
+
+.mat-select-arrow {
+  border: none;
+}
+
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+

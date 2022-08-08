@@ -1,0 +1,48 @@
+<mat-toolbar style="background-color: rgb(4, 107, 154); height: 3rem;">
+  <div class="col-3 d-flex justify-content-start">
+    <h1 style="margin-left: 1rem;">
+      <a routerLink="/" style="cursor: point; color: rgb(240, 253, 255);">{{'title' | translate}}</a>
+    </h1>
+  </div>
+
+  <div class="col-md-7 d-flex justify-content-start mt-3" style="font-size: 1rem;">
+    <ul>
+      <li *ngIf="!isAuth">
+        <a routerLink="/signup">{{'signup' | translate}}</a>
+      </li>
+    </ul>
+    <ul>
+      <li *ngIf="!isAuth">
+        <a routerLink="/login">{{'login' | translate}}</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <a routerLink="/training">{{'training' | translate}}</a>
+      </li>
+    </ul>
+    <ul>
+      <li  *ngIf="isAuth">
+        <a routerLink="/logout" style="cursor: point;" (click)="onLogout()">{{'logout' | translate}}</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-1 d-flex justify-content-end">
+    <button mat-raised-button class="d-flex align-items-center justify-content-center" style="height: 1.1rem; font-size: 0.6rem; border-radius: 6px;" color="primary" (click)="onToggleSidenav()">{{'menu' | translate}}
+      <!-- <mat-icon>menu</mat-icon> -->
+    </button>
+  </div>
+
+  <div class="col-1 d-flex justify-content-end">
+    <mat-form-field style="width: 4rem;" class="langform">
+      <!-- <mat-label style="color:rgb(170, 178, 170) !important;">Language</mat-label> -->
+      <mat-select (selectionChange)="switchLang($event.value)" class="mat-select-green shadow" style="border-radius: 6px; padding: 3px 3px 3px 6px; margin-top: 8px;background-color: rgb(240, 253, 255); font-size: 0.6rem;" [(ngModel)]="selectedLang">
+        <mat-option *ngFor="let language of languages" [value]="language.value">
+          {{ language.show }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+</mat-toolbar>

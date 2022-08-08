@@ -1,0 +1,16 @@
+//change checkbox color
+::ng-deep .mat-checkbox-checked.mat-accent {
+  .mat-checkbox-ripple .mat-ripple-element {
+      background-color: green !important;
+  }
+
+  .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+      background-color: green;
+   }
+}
+
+::ng-deep .mat-checkbox.mat-accent {
+  .mat-checkbox-ripple .mat-ripple-element {
+      background-color: green !important;
+  }
+}

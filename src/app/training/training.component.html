@@ -1,0 +1,16 @@
+<div class="container d-flexbox justify-content-center mt-5">
+  <h1>Sell something here...</h1>
+
+  <mat-tab-group *ngIf="!ongoingTraining">
+    <mat-tab label="New Exercise">
+      <app-new-training (trainingStart)="ongoingTraining = true"></app-new-training>
+    </mat-tab>
+    <mat-tab label="Past Exercises">
+      <app-past-training></app-past-training>
+    </mat-tab>
+  </mat-tab-group>
+
+  <div class="d-flex justify-content-center mt-5">
+    <app-current-training *ngIf="ongoingTraining" (trainingExit)="ongoingTraining = false"></app-current-training>
+  </div>
+</div>

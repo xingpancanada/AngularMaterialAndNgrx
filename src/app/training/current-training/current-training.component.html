@@ -1,0 +1,12 @@
+<div class="container d-flex justify-content-center">
+  <mat-progress-spinner mode="determinate" [value]="progress"></mat-progress-spinner>
+</div>
+<div class="container d-flex justify-content-center">
+  <h1>{{ progress }}%</h1>
+</div>
+<div class="container d-flex justify-content-center">
+  <p>Keep on going, you can do it!</p>
+</div>
+<div class="container d-flex justify-content-center">
+  <button mat-raised-button color="accent" (click)="onStop()">Stop</button>
+</div>

@@ -1,0 +1,21 @@
+<mat-nav-list class="navlist">
+  <a mat-list-item routerLink="/signup" (click)="onClose()" *ngIf="!isAuth">
+    <mat-icon>face</mat-icon>
+    <span class="nav-caption">{{'signup' | translate}}</span>
+  </a>
+  <a mat-list-item routerLink="/login" (click)="onClose()" *ngIf="!isAuth">
+    <mat-icon>input</mat-icon>
+    <span class="nav-caption">{{'login' | translate}}</span>
+  </a>
+  <a mat-list-item routerLink="/training" (click)="onClose()" *ngIf="isAuth">
+    <mat-icon>fitness_center</mat-icon>
+    <span class="nav-caption">{{'training' | translate}}</span>
+  </a>
+
+  <mat-list-item class="logoutbtn" *ngIf="isAuth">
+    <button mat-icon-button (click)="onLogout()">
+      <mat-icon>eject</mat-icon>
+      <span class="nav-caption">{{'logout' | translate}}</span>
+    </button>
+  </mat-list-item>
+</mat-nav-list>

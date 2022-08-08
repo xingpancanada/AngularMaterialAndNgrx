@@ -1,0 +1,45 @@
+.langform{
+  ::ng-deep .mat-form-field-underline{
+    display: none;
+  }
+}
+
+
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+  height: 100%;
+
+}
+
+mat-sidenav {
+  width: 250px;
+  background-color: rgb(229, 249, 255);
+}
+
+ul{
+  list-style: none;
+  font-size: smaller;
+  li{
+    cursor: pointer;
+  }
+}
+
+a {
+  color: rgb(187, 187, 187);
+  text-decoration: none;
+}
+
+a:active{
+  color: rgb(255, 255, 255);
+}
+
+a:focus{
+  color: rgb(255, 255, 255);
+}
+
+a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.isActive{
+  color: rgb(255, 255, 255);
+}

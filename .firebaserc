@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "angularmaterialandngrx"
+  },
+  "targets": {
+    "angularmaterialandngrx": {
+      "hosting": {
+        "AngularMaterialAndNgrx": [
+          "angularmaterialandngrx"
+        ]
+      }
+    }
+  }
+}
